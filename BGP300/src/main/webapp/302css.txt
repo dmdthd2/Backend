@@ -1,0 +1,120 @@
+/*==================
+공통 레이아웃 스타일
+===================*/
+header, main, footer {
+	width: 100%;       /* 화면 전체 폭을 차지 */
+	margin: 0 auto;    /* 좌우 auto → 요소 폭이 줄어들면 화면 가운데 정렬 */
+}
+
+/*==================
+헤더 영역 스타일
+===================*/
+header {
+	display: flex;                /* 안쪽 요소들을 가로로 배치하는 flex 컨테이너 */
+	align-items: center;          /* 세로 방향 중앙 정렬 */
+	justify-content: space-between; /* 좌측/우측 요소 사이에 공간을 균등하게 배분 */
+	background-color: #ffffff;    /* 배경 흰색 */
+	padding: 5px 0px;             /* 위아래 5px, 좌우 0px 안쪽 여백 */
+}
+
+header img {
+	height: 80px;  /* 이미지 높이를 80px로 고정 */
+	width: auto;   /* 가로 크기는 비율 유지 (세로에 맞게 자동 조정) */
+}
+
+/*==================
+제목글 스타일
+===================*/
+.shine-text {
+	color: white;                                     /* 글자색 흰색 */
+	font-size: 40px;                                  /* 글자 크기 40px */
+	text-align: center;                               /* 텍스트 가운데 정렬 */
+	animation: glow 1.5s ease-in-out infinite alternate;
+	/* glow 애니메이션 실행
+	   - 1.5초 간격
+	   - ease-in-out: 느리게 시작 → 빨라졌다가 → 느리게 끝남
+	   - infinite: 무한 반복
+	   - alternate: 왕복 재생 (앞→뒤→앞) */
+}
+
+@keyframes glow {
+	from {
+	  text-shadow: 0 0 5px #3399ff,   /* 글자 주위 파란 빛 효과 */
+	               0 0 10px #3399ff,
+	               0 0 20px #3399ff;
+	}
+	to {
+	  text-shadow: 0 0 10px #66ccff,  /* 더 밝고 넓은 파란빛 효과 */
+	               0 0 20px #66ccff,
+	               0 0 40px #66ccff;
+	}
+}
+
+/*==================
+네비게이션 메뉴 스타일
+===================*/
+nav ul {
+	list-style: none;  /* 불릿 제거 */
+	display: flex;     /* 가로 정렬 */
+	margin: 0;         /* 바깥 여백 제거 */
+	padding: 0;        /* 안쪽 여백 제거 */
+}
+
+nav ul li {
+	margin: 0 15px;    /* 각 메뉴 항목 좌우 15px 간격 */
+}
+
+nav ul li a {
+	text-decoration: none; /* 밑줄 제거 */
+	color: black;          /* 글자색 검정 */
+	font-weight: bold;     /* 글자 굵게 */
+}
+
+/*==================
+로그인 폼 스타일
+===================*/
+.login-btn {
+	background-color: blue;  /* 버튼 배경 파랑 */
+	color: white;            /* 버튼 글자 흰색 */
+	border: none;            /* 테두리 제거 */
+	padding: 10px 20px;      /* 위아래 10px, 좌우 20px 여백 */
+	font-size: 16px;         /* 글자 크기 16px */
+	border-radius: 5px;      /* 모서리 둥글게 5px */
+	cursor: pointer;         /* 마우스 올리면 포인터 커서 */
+}
+
+.login-btn:hover {
+	background-color: darkblue; /* 버튼에 마우스 올리면 진한 파랑 */
+}
+
+.login-input {
+	border: 1px solid #ccc;         /* 연한 회색 테두리 */
+	padding: 8px 12px;              /* 입력창 안쪽 여백 */
+	border-radius: 8px;             /* 둥근 모서리 8px */
+	outline: none;                  /* 포커스 시 기본 아웃라인 제거 */
+	font-size: 14px;                /* 글자 크기 14px */
+}
+
+.login-input:focus {
+	border-color: #3399ff;          /* 포커스 시 파란 테두리 */
+	box-shadow: 0 0 5px rgba(51, 153, 255, 0.5); /* 파란빛 그림자 */
+}
+
+/*==================
+메인 영역 스타일
+===================*/
+main {
+	text-align: center; /* 텍스트 가운데 정렬 */
+	padding: 20px;      /* 사방(위/아래/좌/우) 20px 여백 */
+}
+
+/*==================
+푸터 영역 스타일
+===================*/
+footer {
+	background-color: #333; /* 배경 진한 회색 */
+	color: #fff;            /* 글자 흰색 */
+	text-align: center;     /* 텍스트 가운데 정렬 */
+	padding: 10px 0;        /* 위아래 10px, 좌우 0px 여백 */
+	font-size: 14px;        /* 글자 크기 14px */
+}

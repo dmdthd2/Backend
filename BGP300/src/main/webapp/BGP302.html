@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BGP Practice #302</title>
+<style>
+/*==================
+공통 레이아웃 스타일
+===================*/
+header, main, footer {
+	width: 100%;
+	margin: 0 auto; /*화면 가운데 정렬*/
+}
+/*==================
+헤더 영역 스타일
+===================*/
+
+header {
+	display: flex; /*내부 요소 가로 정렬*/
+	align-items: center; /*세로 가운데 정렬*/
+	justify-content: space-between; /*좌, 우 공간 배분*/
+	background-color: #ffffff; /*배경색*/
+	padding: 5px 0px; /*상하좌우 여백*/
+}
+
+header img {
+	height: 80px; /*메뉴바 높이에 맞춰 이미지 크기*/
+	width: auto; /*원본 비율 유지*/
+}
+/*==================
+제목글 스타일
+===================*/
+.shine-text {
+	color: white;
+	font-size: 40px;
+	text-align: center;
+	animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+	from {
+  text-shadow: 0 0 5px #3399ff, 0 0 10px #3399ff, 0 0 20px #3399ff;
+}
+
+to {
+	text-shadow: 0 0 10px #66ccff, 0 0 20px #66ccff, 0 0 40px #66ccff;
+}
+
+}
+/*==================
+네비게이션 메뉴 스타일
+===================*/
+
+nav ul {
+	list-style: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	margin: 0 15px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
+
+/*==================
+로그인 폼 스타일
+===================*/
+
+.login-btn {
+	background-color: blue;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	font-size: 16px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.login-btn:hover {
+	background-color: darkblue;
+}
+
+.login-input {
+	border: 1px solid #ccc;
+	padding: 8px 12px;
+	border-radius: 8px;
+	outline: none;
+	font-size: 14px;
+}
+
+.login-input:focus {
+	border-color: #3399ff;
+	box-shadow: 0 0 5px rgba(51, 153, 255, 0.5);
+}
+
+/*==================
+메인 영역 스타일
+===================*/
+main {
+	text-align: center;
+	padding: 20px; /*위아래여백*/
+}
+/*==================
+푸터 영역 스타일
+===================*/
+
+footer{
+	background-color: #333;
+	color:#fff;
+	text-align: center;
+	padding:10px 0;
+	font-size:14px;
+	}
+</style>
+</head>
+<body>
+	<header>
+		<div>
+		<img alt="영진로고이미지" src="./img/yju_logo.png">
+		</div>
+		<div>
+		<h1 class="shine-text">BGP Practice #302</h1>
+		</div>
+		
+		<nav>
+			<ul>
+				<li><a href="#">대학안내</a></li>
+				<li><a href="#">계열학과</a></li>
+				<li><a href="#">캠퍼스라이프</a></li>
+				<li><a href="#"> Pride of YJU</a></li>
+			</ul>
+		</nav>
+		
+		<div>
+			<form class="login-form">
+				<input class="login-input" type="text" placeholder="아이디">
+				<input class="login-input" type="password" placeholder="비밀번호">
+				<button class="login-btn" type="submit">로그인</button>
+				<button type ="button">회원가입</button>
+			</form>
+		</div>
+	</header>
+	
+<hr>
+
+<main>
+	<img alt="메인이미지" src="./img/yju_main1.png">
+</main>
+	
+<footer>
+	<h3>COPYRIGHT(C) ESKIM ALL RIGHTS RESERVED</h3>
+</footer>
+</body>
+</html>
