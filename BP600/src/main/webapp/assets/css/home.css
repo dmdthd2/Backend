@@ -1,0 +1,118 @@
+@charset "UTF-8"; /* CSS 파일의 문자 인코딩을 UTF-8로 설정 */
+
+/* 공통 레이아웃 설정: header, main, footer */
+header, main, footer {
+	width:100%;       /* 전체 너비를 100%로 */
+	margin:0 auto;    /* 위/아래는 0, 좌우는 자동 (가운데 정렬 효과) */
+}
+
+header {
+	display: flex;                /* header 안 자식들을 플렉스 컨테이너로(기본값이 가로이르모 가로정렬) */
+	align-items: center;          /* 세로 방향 중앙 정렬 */
+	justify-content: space-between; /* 가로 방향 좌우 끝에 배치, 사이 간격 자동 */
+	background-color:#ffffff;     /* 흰색 배경 */
+	padding:5px 0px;              /* 위아래 5px, 좌우 0px 여백 */
+}
+
+header img {
+	height:80px; /* 높이를 80px 고정 */
+	width:auto;  /* 비율을 유지하며 너비 자동 조정 */
+}
+
+/* 반짝이는 텍스트 효과 */
+.shine-text {
+	color:white;
+	font-size:40px;
+	text-align: center;
+	animation:glow 1.5s ease-in-out infinite alternate;
+	/* glow 애니메이션 실행, 1.5초 주기로 왕복 무한 반복 */
+}
+
+/* 글로우 애니메이션 정의 */
+@keyframes glow {  
+	from {
+		text-shadow:0 0 5px #3399ff, 0 0 10px #3399ff, 0 0 20px #3399ff;
+	}
+	to {
+		text-shadow:0 0 10px #66ccff, 0 0 20px #66ccff, 0 0 40px #66ccff;
+	}
+}
+
+/* 네비게이션 메뉴 스타일 */
+nav ul {
+	list-style:none;  /* 불릿(.) 제거 */
+	display:flex;     /* 가로 배치 */
+	margin:0;
+	padding:0;
+}
+nav ul li{
+	margin:0 15px;
+}
+nav ul li a {
+	text-decoration: none;   /* 밑줄 제거 */
+	color:black;
+	font-weight:bold;
+	transition: color 0.3s ease, text-decoration 0.3s ease; /* 링크 hover 시 색상과 밑줄이 0.3초 동안 부드럽게 전환되도록 설정 */
+	
+}
+
+nav ul li a:hover {         /*hover: 마우스를 올린 상태*/
+	color:#007bff;          /* 마우스 올리면 파란색으로 */
+	text-decoration:underline; /* 밑줄 표시 */
+}
+
+
+.login-btn {
+	background-color:blue;
+	color:white;
+	border:none;
+	padding:10px 20px;
+	font-size:16px;
+	border-radius:5px; /* 모서리 둥글게 */
+	cursor:pointer;    /* 마우스 커서 손가락 모양 */
+}
+
+.login-btn:hover {
+	background-color:darkblue; /* hover 시 진한 파랑 */
+}
+
+
+.login-input {
+	border:1px solid #ccc;
+	padding: 8px 12px ;
+	border-radius:8px;
+	outline:none;
+	font-size:14px;
+}
+
+.login-input:focus {
+	border-color:#3399ff;
+	box-shadow:0 0 5px rgba(51,153,255,0.5); /* 파란색 그림자 효과 */
+}
+
+/* sub 요소 안 리스트 스타일 */
+sub ul li {
+	list-style:none;
+}
+
+sub ul li:nth-child(odd) {
+	background-color:#f9f9f9; /* 홀수 항목 배경 */
+}
+
+sub ul li:nth-child(even) {
+	background-color:#e0e0e0; /* 짝수 항목 배경 */
+}
+
+main {
+	min-height:500px;  /* 최소 높이 500px */
+	text-align:center;
+	padding:20px;
+}
+
+footer {
+	background-color:#333;
+	color:#fff;
+	text-align:center;
+	padding:10px 0;
+	font-size:14px;
+}
